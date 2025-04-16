@@ -6,8 +6,12 @@ import Footer from "./components/Footer";
 
 export const metadata = {
   title: 'Baltic Dragons',
-  description: 'Norddeutscher Drachenbootverein',
+  description: 'Norddeutsches Drachenbootteam',
+  icons: {
+    icon: '/baltics-logo-light.png', // oder /favicon.svg / .png
+  },
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
