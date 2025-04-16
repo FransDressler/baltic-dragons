@@ -9,10 +9,12 @@ export default function Footer() {
         {/* Kontakt & Impressum */}
         <div>
           <h3 className="text-xl font-semibold text-sky-300 mb-4">Kontakt</h3>
-          <p className="mb-1">Baltic Dragons e.V.</p>
-          <p className="mb-1">Drachenbootstraße 7</p>
-          <p className="mb-1">23999 Insel Poel</p>
-          <p className="mb-1">Email: kontakt@balticdragons.de</p>
+          <Link href="https://www.kanufreunde.de/" className="mb-1 block mt-6 text-sky-400 hover:text-sky-300 underline">Kanufreunde Rostocker Greif e.V. (KfRG)
+          </Link>
+          <p className="mb-1">Gaffelschonerweg 6,</p>
+          <p className="mb-1">18055 Rostock</p>
+          
+          <p className="mb-1">Email: dietmar.stenzel-balticteam@web.de</p>
           <Link
             href="/impressum"
             className="block mt-6 text-sky-400 hover:text-sky-300 underline"

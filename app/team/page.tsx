@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-
+import Link from 'next/link';
 const clubs = [
   {
     name: 'Wassersportclub Wismar',
@@ -110,8 +110,9 @@ export default function StandortePage() {
         </div>
 
       </div>
-         <h2 className="text-4xl md:text-5xl font-black text-sky-200 mt-16 text-center uppercase">
-          ... vereint  unter  dem  [Platzhalter Verbandsbund]
+         <h2 className="text-4xl md:text-3xl font-black text-sky-200 mt-16 text-center uppercase">
+          ... vereint  unter  dem  <Link href="https://www.kanufreunde.de/" className="mb-1 block mt-6 text-sky-400 hover:text-sky-300 underline">Kanufreunde Rostocker Greif e.V. (KfRG)
+          </Link>
          </h2>
 
     </section>
