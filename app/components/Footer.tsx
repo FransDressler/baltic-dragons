@@ -1,4 +1,3 @@
-
 'use client';
 import Link from 'next/link';
 
@@ -9,11 +8,11 @@ export default function Footer() {
         {/* Kontakt & Impressum */}
         <div>
           <h3 className="text-xl font-semibold text-sky-300 mb-4">Kontakt</h3>
-          <Link href="https://www.kanufreunde.de/" className="mb-1 block mt-6 text-sky-400 hover:text-sky-300 underline">Kanufreunde Rostocker Greif e.V. (KfRG)
+          <Link href="https://www.kanufreunde.de/" className="mb-1 block mt-6 text-sky-400 hover:text-sky-300 underline">
+            Kanufreunde Rostocker Greif e.V. (KfRG)
           </Link>
           <p className="mb-1">Gaffelschonerweg 6,</p>
           <p className="mb-1">18055 Rostock</p>
-          
           <p className="mb-1">Email: dietmar.stenzel-balticteam@web.de</p>
           <Link
             href="/impressum"
@@ -26,20 +25,30 @@ export default function Footer() {
         {/* Kontaktformular */}
         <div className="md:col-span-2">
           <h3 className="text-xl font-semibold text-sky-300 mb-4">Schreib uns eine Nachricht</h3>
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <form
+            action="https://formspree.io/f/mrbqbanl"
+            method="POST"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          >
             <input
               type="text"
+              name="name"
               placeholder="Name"
+              required
               className="bg-sky-900 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400 col-span-1"
             />
             <input
               type="email"
+              name="email"
               placeholder="Email"
+              required
               className="bg-sky-900 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400 col-span-1"
             />
             <textarea
+              name="message"
               placeholder="Nachricht"
               rows={4}
+              required
               className="bg-sky-900 text-white px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-400 md:col-span-2"
             ></textarea>
             <button
@@ -53,10 +62,12 @@ export default function Footer() {
       </div>
 
       {/* Footer-Credit */}
-      <div className="mt-16 text-center text-sm text-stone-400">
+      <div className="mt-16 text-right text-sm text-stone-400">
         Website Design & Umsetzung von <span className="text-sky-400">Frans Dressler</span>
+      </div>
+      <div className="text-right text-sm text-stone-400">
+        Überarbeitetes Logo von <span className="text-sky-400">Joanna Höpfner</span>
       </div>
     </footer>
   );
 }
-

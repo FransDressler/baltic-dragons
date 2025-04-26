@@ -7,7 +7,7 @@ import Link from 'next/link';
 const newsItems = [
   {
     title: 'Trainingslager 26./27.04.2025 in Rostock',
-    image: '/news/news2.jpg',
+    image: '/news/trainingslager-rostock-2025/trainingslager1.jpg',
     description:
       'Bei bestem Wetter trainierten Damen und Herren im SmallBoat beim KfrG e.V. in Vorbereitung auf die Deutsche Meisterschaft 2025 in Halle.',
     link: '/news/trainingslager-rostock-2025',
