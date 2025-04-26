@@ -1,27 +1,16 @@
 
-
 'use client';
+import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const news = [
   {
-    title: 'Neue Saison beginnt mit Trainingslager',
-    image: '/news/news1.jpg',
+    title: 'Trainingslager 26./27.04.2025 in Rostock',
+    image: '/news/trainingslager-rostock-2025/trainingslager1.jpg',
     content:
-      'Die Baltic Dragons starten mit einem intensiven Trainingslager an der Ostsee in die neue Saison. Teamgeist, Technik und jede Menge Spaß standen auf dem Programm.\n\nDas Training wurde von erfahrenen Coaches begleitet und fand unter idealen Wetterbedingungen statt. Neben den sportlichen Zielen stand vor allem das Zusammenwachsen als Team im Vordergrund.',
-  },
-  {
-    title: 'Baltic Dragons holen Medaille bei internationalem Cup',
-    image: '/news/news2.jpg',
-    content:
-      'Ein spannendes Rennen, starke Konkurrenz und eine verdiente Bronzemedaille – so lief es beim diesjährigen internationalen Drachenboot-Cup.\n\nNach einem holprigen Start kämpfte sich das Team mit beeindruckendem Einsatz nach vorne und bewies erneut seine Klasse auf dem internationalen Parkett.',
-  },
-  {
-    title: 'Mitgliedertreffen und Sommerfest 2025 angekündigt',
-    image: '/news/news3.jpg',
-    content:
-      'Das große Sommerfest ist zurück! Neben leckerem Essen und Musik gibt es spannende Spiele und eine Bootstaufe – save the date!\n\nAlle Mitglieder und Freunde des Vereins sind herzlich eingeladen, gemeinsam mit uns diesen besonderen Tag zu feiern. Weitere Details folgen demnächst.',
+      'Bei bestem Wetter trainierten Damen und Herren im SmallBoat beim KfrG e.V. in Vorbereitung auf die Deutsche Meisterschaft 2025 in Halle.',
+    link: '/news/trainingslager-rostock-2025',
   },
 ];
 
@@ -48,16 +37,19 @@ export default function NewsPage() {
               viewport={{ once: true }}
               className="bg-sky-900 rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              <div className="relative">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={1000}
-                  height={600}
-                  className="w-full h-64 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-sky-950 via-transparent to-transparent" />
-              </div>
+              <Link href={item.link} className="block relative group">
+                <div className="relative">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={1200} // Größer gemacht
+                    height={800}
+                    className="w-full h-80 md:h-[30rem] object-cover transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-sky-950 via-transparent to-transparent" />
+                </div>
+              
+
               <div className="p-6 md:p-10">
                 <h2 className="text-3xl font-bold text-sky-300 mb-4">
                   {item.title}
@@ -67,6 +59,7 @@ export default function NewsPage() {
                   {item.content}
                 </p>
               </div>
+              </Link>
             </motion.article>
           ))}
         </div>

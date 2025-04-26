@@ -1,120 +1,81 @@
-
-
 'use client';
-import { useState } from 'react';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
+import { MapPin } from 'lucide-react'; // schönes minimalistisches Icon
 import Link from 'next/link';
-const clubs = [
+
+const teams = [
   {
-    name: 'Wassersportclub Wismar',
-    position: { top: '60%', left: '35%' },
-    image: '/news/news1.jpg',
-    info: 'Heimatbasis vieler Baltic Dragons. Hier findet auch das Sonntagstraining statt.',
+    name: 'Kanufreunde Rostocker Greif e.V. (KfRG)',
+    location: 'Rostock',
+    description: 'Starkes Heimatteam und organisatorische Heimat der Baltic Dragons.',
   },
   {
-    name: 'Drachenboot Rostock e.V.',
-    position: { top: '40%', left: '45%' },
-    image: '/news/news1.jpg',
-    info: 'Starker Partnerclub mit vielen Baltic Dragons Mitgliedern.',
+    name: 'SV Breitling e.V. Rostock',
+    location: 'Rostock',
+    description: 'Partnerverein in Rostock mit vielen aktiven Paddlern.',
   },
   {
-    name: 'Hanse-Paddler Lübeck',
-    position: { top: '50%', left: '20%' },
-    image: '/news/news1.jpg',
-    info: 'Trainingspartner auf der Trave. Tolle Gemeinschaft und regelmäßige Events.',
+    name: 'Stralsunder Kanu Club e.V.',
+    location: 'Stralsund',
+    description: 'Repräsentiert die Baltic Dragons in Stralsund.',
+  },
+  {
+    name: 'SCN Sportclub Neubrandenburg e.V.',
+    location: 'Neubrandenburg',
+    description: 'Ambitioniertes Einzelteam im Herzen Mecklenburgs.',
+  },
+  {
+    name: 'WSAP Hamburg',
+    location: 'Hamburg',
+    description: 'Die Baltic Dragons Crew in der Hansestadt.',
+  },
+  {
+    name: 'Kanusportverein Güstrow 1990 e.V.',
+    location: 'Güstrow',
+    description: 'Tradition und Leidenschaft auf dem Inselsee.',
+  },
+  {
+    name: 'Hannoverscher Kanu-Club von 1921 (HKC)',
+    location: 'Hannover',
+    description: 'Baltic Dragons Kraft aus Niedersachsen.',
   },
 ];
 
-export default function StandortePage() {
-  const [activeClub, setActiveClub] = useState(clubs[0]);
-
+export default function TeamsPage() {
   return (
-    <section className="relative w-full min-h-screen bg-sky-950 py-32 px-6 md:px-16 text-stone-100 overflow-hidden">
-      <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-4xl md:text-5xl font-black text-sky-200 mb-16 text-center uppercase">
-          Das  Team  der  Baltic  Dragons ...  
+    <section className="w-full min-h-screen bg-gradient-to-b from-sky-950 via-sky-900 to-sky-950 py-20 px-6 md:px-16 text-stone-100">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-black text-center text-sky-200 mb-16 uppercase tracking-wide">
+          Unsere Teams
         </h2>
 
-        <div className="hidden lg:flex flex-col lg:flex-row gap-12 items-start">
-          {/* Hintergrundkarte mit Marker */}
-          <div className="relative w-full lg:w-2/3 h-[600px] rounded-xl overflow-hidden shadow-lg">
-            <Image
-              src="/map-norddeutschland.jpg"
-              alt="Karte Norddeutschland"
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 768px) 100vw, 1000px"
-              priority
-            />
-
-            {clubs.map((club, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveClub(club)}
-                onMouseEnter={() => setActiveClub(club)}
-                className="absolute bg-sky-500 text-xs px-3 py-1 rounded-full shadow hover:bg-sky-400 transition-all"
-                style={{ top: club.position.top, left: club.position.left, transform: 'translate(-50%, -50%)' }}
-              >
-                {club.name}
-              </button>
-            ))}
-          </div>
-
-          {/* Club Info Panel */}
-          <div className="w-full lg:w-1/3">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeClub.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5 }}
-                className="bg-sky-900 rounded-xl p-6 md:p-10 shadow-xl"
-              >
-                <h3 className="text-2xl md:text-3xl font-bold text-sky-300 mb-4">
-                  {activeClub.name}
-                </h3>
-                <div className="relative w-full h-56 mb-6 rounded overflow-hidden">
-                  <Image
-                    src={activeClub.image}
-                    alt={activeClub.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-stone-100 text-base leading-relaxed">
-                  {activeClub.info}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-
-        {/* Mobile Version: Alle Clubs untereinander */}
-        <div className="grid gap-12 lg:hidden">
-          {clubs.map((club, i) => (
-            <div key={i} className="bg-sky-900 rounded-xl p-6 shadow-xl">
-              <h3 className="text-2xl font-bold text-sky-300 mb-4">{club.name}</h3>
-              <div className="relative w-full h-56 mb-6 rounded overflow-hidden">
-                <Image
-                  src={club.image}
-                  alt={club.name}
-                  fill
-                  className="object-cover"
-                />
+        <div className="grid gap-10 md:grid-cols-2">
+          {teams.map((team, index) => (
+            <div
+              key={index}
+              className="group bg-sky-900/50 border border-sky-700/30 rounded-2xl p-8 shadow-xl backdrop-blur-sm transition-all hover:scale-105 hover:shadow-2xl hover:border-sky-400"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-2xl font-bold text-sky-300">{team.name}</h3>
               </div>
-              <p className="text-stone-100 text-base leading-relaxed">{club.info}</p>
+              <div className="flex items-center gap-2 mb-4 text-sky-400 text-sm">
+                <MapPin size={16} />
+                <span>{team.location}</span>
+              </div>
+              <div className="h-px w-full bg-sky-700/20 mb-4" />
+              <p className="text-stone-200 leading-relaxed">
+                {team.description}
+              </p>
             </div>
           ))}
         </div>
 
-      </div>
-         <h2 className="text-4xl md:text-3xl font-black text-sky-200 mt-16 text-center uppercase">
-          ... vereint  unter  dem  <Link href="https://www.kanufreunde.de/" className="mb-1 block mt-6 text-sky-400 hover:text-sky-300 underline">Kanufreunde Rostocker Greif e.V. (KfRG)
+        <h2 className="text-2xl font-bold text-sky-400 text-center mt-20">
+          ... vereint unter dem{' '}
+          <Link href="https://www.kanufreunde.de/" className="underline hover:text-sky-300">
+            Kanufreunde Rostocker Greif e.V.
           </Link>
-         </h2>
-
+        </h2>
+      </div>
     </section>
   );
 }

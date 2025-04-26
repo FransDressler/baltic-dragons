@@ -6,26 +6,13 @@ import Link from 'next/link';
 
 const newsItems = [
   {
-    title: 'Saisonstart 2025 – Wir sind bereit!',
-    image: '/news/news1.jpg',
-    description:
-      'Mit neuen Paddeln, frischer Energie und vielen Events starten wir in die neue Saison.',
-    link: '/news/saisonstart-2025',
-  },
-  {
-    title: 'Erfolg bei den Norddeutschen Meisterschaften',
+    title: 'Trainingslager 26./27.04.2025 in Rostock',
     image: '/news/news2.jpg',
     description:
-      'Unser Team holte Gold auf der 200 m und 500 m Strecke – was für ein Rennen!',
-    link: '/news/norddeutsche-meisterschaften',
-  },
-  {
-    title: 'Jetzt Mitglied werden!',
-    image: '/news/news3.jpg',
-    description:
-      'Du willst mitpaddeln? Komm zum Schnuppertraining – alle Infos hier.',
-    link: '/news/mitglied-werden',
-  },
+      'Bei bestem Wetter trainierten Damen und Herren im SmallBoat beim KfrG e.V. in Vorbereitung auf die Deutsche Meisterschaft 2025 in Halle.',
+    link: '/news/trainingslager-rostock-2025',
+  }
+  
 ];
 
 export default function NewsSection() {
