@@ -3,26 +3,31 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 
-const events = [
+// Typen definieren
+interface EventData {
+  title: string;
+  image: string[];
+  locationTime: string;
+  description: string;
+  achievements: string[];
+}
+
+const events: EventData[] = [
   {
     title: '19. Club-Crew Europameisterschaften (ECCC)',
-    image: ['/erfolge/club-europameisterschaft-19-1.jpg',
-           '/erfolge/club-europameisterschaft-19-2.jpg'
-           ],
+    image: ['/erfolge/club-europameisterschaft-19-1.jpg', '/erfolge/club-europameisterschaft-19-2.jpg'],
     locationTime: 'Ravenna, 06. - 10. September 2023',
     description: 'Teilnahme an den 19. Club-Crew Europameisterschaften mit herausragenden Leistungen.',
     achievements: [
       'Bronze, 2000m im 20er MixBoat',
       'Bronze, 2000 m im 10er SmallBoat Woman',
       'Gold, 200 m  im 10er SmallBoat Woman',
-      'Gold, 500 m im 10er SmallBoat Woman'
+      'Gold, 500 m im 10er SmallBoat Woman',
     ],
   },
   {
     title: '14. Club-Weltmeisterschaft im Drachenboot (IDBF CCWC)',
-    image: [
-           '/erfolge/club-weltmeisterschaft-14-2.jpg',
-           '/erfolge/club-weltmeisterschaft-14-3.jpg'],
+    image: ['/erfolge/club-weltmeisterschaft-14-2.jpg', '/erfolge/club-weltmeisterschaft-14-3.jpg'],
     locationTime: 'Standiana-See, Ravenna, 03. - 08. September 2024',
     description: 'Teilnahme an der Club-Weltmeisterschaft mit wertvollen internationalen Erfahrungen.',
     achievements: [],
@@ -56,8 +61,14 @@ export default function AchievementsSection() {
   );
 }
 
-function EventBlock({ event, index }) {
-  const [currentImage, setCurrentImage] = useState(0);
+// Props-Typisierung für EventBlock
+interface EventBlockProps {
+  event: EventData;
+  index: number;
+}
+
+function EventBlock({ event, index }: EventBlockProps) {
+  const [currentImage, setCurrentImage] = useState<number>(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -72,19 +83,22 @@ function EventBlock({ event, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className={`grid lg:grid-cols-2 gap-10 items-center`}
+      className="grid lg:grid-cols-2 gap-10 items-center"
     >
-      <div className={`order-1 lg:order-${index % 2 === 0 ? '1' : '2'} w-full h-full`}>
-        <Image
-          src={event.image[currentImage]}
-          alt={`${event.title} Bild ${currentImage + 1}`}
-          width={800}
-          height={500}
-          className="rounded-xl shadow-lg object-cover w-full h-full"
-        />
-      </div>
+      <div className={`order-1 lg:order-${index % 2 === 0 ? '1' : '2'} w-full`}>
+  <div className="relative w-full h-[350px] overflow-hidden rounded-xl shadow-lg">
+    <Image
+      src={event.image[currentImage]}
+      alt={`${event.title} Bild ${currentImage + 1}`}
+      fill
+      style={{ objectFit: 'cover' }}
+      className="rounded-xl"
+    />
+  </div>
+</div>
 
-      <div className={`text-left order-2 lg:order-${index % 2 === 0 ? '2' : '1'} min-h-110 md:px-6`}>
+
+      <div className={`text-left order-2 lg:order-${index % 2 === 0 ? '2' : '1'} min-h-10 md:px-6`}>
         <h3 className="text-2xl md:text-3xl font-semibold text-sky-300 mb-2">
           {event.title}
         </h3>
@@ -96,7 +110,7 @@ function EventBlock({ event, index }) {
         </p>
         {event.achievements.length > 0 && (
           <ul className="list-disc list-inside space-y-2 text-stone-100">
-            {event.achievements.map((achievement, idx) => (
+            {event.achievements.map((achievement: string, idx: number) => (
               <li key={idx}>{achievement}</li>
             ))}
           </ul>
