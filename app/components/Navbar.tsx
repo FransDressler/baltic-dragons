@@ -94,13 +94,13 @@ export default function Navbar() {
       {/* Dropdown */}
       {mobileOpen && (
         <div className="absolute top-full left-0 w-full bg-sky-950 border-t border-sky-800 text-center py-4 space-y-4 md:hidden">
-          <Link href="#home" onClick={() => setMobileOpen(false)} className="block hover:text-sky-400">
+          <Link href="/" onClick={() => setMobileOpen(false)} className="block hover:text-sky-400">
             Home
           </Link>
-          <Link href="#news" onClick={() => setMobileOpen(false)} className="block hover:text-sky-400">
+          <Link href="/news" onClick={() => setMobileOpen(false)} className="block hover:text-sky-400">
             News
           </Link>
-          <Link href="#team" onClick={() => setMobileOpen(false)} className="block hover:text-sky-400">
+          <Link href="/team" onClick={() => setMobileOpen(false)} className="block hover:text-sky-400">
             Team
           </Link>
         </div>
