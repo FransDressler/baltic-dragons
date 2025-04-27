@@ -8,14 +8,17 @@ const article = {
   images: [
     '/news/trainingslager-rostock-2025/trainingslager1.jpg',
     '/news/trainingslager-rostock-2025/trainingslager2.jpg',
-    '/news/trainingslager-rostock-2025/trainingslager3.jpg',
+   
   ],
   content: `
-Bei bestem Wetter absolvierten die Damen- und Herren-Teams der Baltic Dragons ihr Trainingslager beim KfrG e.V. in Rostock.
+    Bei bestem Wetter absolvierten wir unser Trainingslager beim KfrG e.V. in Rostock.
 
-Im Fokus standen Technik, Ausdauer und die finale Vorbereitung auf die Deutsche Drachenboot Meisterschaft 2025 in Halle.
+    Am Samstag lag der Fokus auf intensiven Einheiten im SmallBoat, bei denen Technik und Ausdauer auf den Distanzen 200 m, 500 m und 2000 m im Vordergrund standen.
+    
+    Am Sonntag wechselten wir ins 20er MixBoat und trainierten gemeinsam an Taktik, Rhythmus und Teamzusammenhalt.
 
-Mit vollem Einsatz, neuen Paddeln und viel Teamgeist konnten wertvolle Trainingskilometer gesammelt werden. Ein perfekter Start in die neue Saison!
+    Mit viel Energie und einer starken Mannschaft konnten wir wichtige Trainingskilometer sammeln und wertvolle Erfahrungen für die Deutsche Drachenboot Meisterschaft 2025 in Halle gewinnen.
+
   `,
 };
 

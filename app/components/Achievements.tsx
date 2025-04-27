@@ -28,7 +28,7 @@ const events: EventData[] = [
   {
     title: '14. Club-Weltmeisterschaft im Drachenboot (IDBF CCWC)',
     image: ['/erfolge/club-weltmeisterschaft-14-2.jpg', '/erfolge/club-weltmeisterschaft-14-3.jpg'],
-    locationTime: 'Standiana-See, Ravenna, 03. - 08. September 2024',
+    locationTime: 'Ravenna, 03. - 08. September 2024',
     description: 'Teilnahme an der Club-Weltmeisterschaft mit wertvollen internationalen Erfahrungen.',
     achievements: [],
   },
