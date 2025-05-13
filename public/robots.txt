@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.balticdragons.de/sitemap.xml
+Sitemap: https://www.baltic-dragons.de/sitemap.xml

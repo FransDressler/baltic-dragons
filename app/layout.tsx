@@ -11,7 +11,7 @@ export const metadata = {
   openGraph: {
     title: 'Baltic Dragons | Norddeutsches Drachenbootteam',
     description: 'Erlebe Drachenbootsport an der Ostsee mit den Baltic Dragons. Jetzt mehr erfahren!',
-    url: 'https://www.balticdragons.de', // echte Domain
+    url: 'https://www.baltic-dragons.de', // echte Domain
     type: 'website',
     images: [
       {
