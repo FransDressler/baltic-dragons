@@ -6,19 +6,20 @@ import { motion } from 'framer-motion';
 
 const news = [
   {
+    title: 'Trainingslager 10./11.05.2025 in Rostock',
+    image: '/news/trainingslager-rostock-10-05-2025/trainingslager1.jpg',
+    content:
+      'Am Samstag trainierten wir im Wechsel zwischen Großboot und Smallboot – volle Konzentration auf saubere Technik und kraftvolle Schläge. Der Sonntag stand ganz im Zeichen des Großboots: Fokus auf die Rennstruktur über die unterschiedlichen Distanzen, abgestimmte Starts, starke Mittelteile und explosive Zieleinläufe.',
+    link: '/news/trainingslager-rostock-10-05-2025',
+  },
+  {
     title: 'Trainingslager 26./27.04.2025 in Rostock',
     image: '/news/trainingslager-rostock-2025/trainingslager1.jpg',
     content:
       'Bei bestem Wetter trainierten wir beim KfrG e.V. mit Fokus auf 200 m, 500 m und 2000 m in Vorbereitung auf die Deutsche Meisterschaft 2025 in Halle.',
     link: '/news/trainingslager-rostock-2025',
   },
-  {
-    title: 'Trainingslager 10./11.05.2025 in Rostock',
-    image: '/news/trainingslager-rostock-2025/trainingslager1.jpg',
-    content:
-      'Am Samstag trainierten wir im Wechsel zwischen Großboot und Smallboot – volle Konzentration auf saubere Technik und kraftvolle Schläge. Der Sonntag stand ganz im Zeichen des Großboots: Fokus auf die Rennstruktur über die unterschiedlichen Distanzen, abgestimmte Starts, starke Mittelteile und explosive Zieleinläufe.',
-    link: '/news/trainingslager-rostock-10-05-2025',
-  },
+
 ];
 
 export default function NewsPage() {
