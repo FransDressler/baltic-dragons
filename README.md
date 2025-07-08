@@ -1,8 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Baltic Dragons Landing Page
+
+This is the **official landing page for the Baltic Dragons**, the reigning European champions in dragon boat racing.
+
+The website includes dynamic sections such as **news, mission, locations, and team details**, optimized for **performance, accessibility, and mobile responsiveness**. It is a **volunteer-maintained project** supporting a local sports community.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) (App Router)
+- [Tailwind CSS](https://tailwindcss.com)
+- [TypeScript](https://www.typescriptlang.org)
+- Hosted on [Vercel](https://vercel.com)
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Then run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +37,35 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/` – Next.js App Router pages and layouts
+- `components/` – Reusable React components
+- `public/` – Static assets
+- `styles/` – Tailwind and global CSS
+- `next.config.js` – Next.js configuration
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The site is deployed on [Vercel](https://vercel.com), providing automatic CI/CD and global edge delivery for fast load times.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To deploy:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Push your changes to your main branch on GitHub.
+2. Vercel will automatically build and deploy the site.
 
-## Deploy on Vercel
+For manual deployment, follow [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is a **volunteer community project**. If you wish to improve the site, you are welcome to open a PR or issue.
+
+## License
+
+MIT License
+
+---
+
+Maintained with ❤️ for the **Baltic Dragons**.
