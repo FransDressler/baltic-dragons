@@ -6,6 +6,13 @@ import Link from 'next/link';
 
 const newsItems = [
   {
+    title: '11. Deutsche Drachenbootmeisterschaft 2025',
+    image: '/news/deutsche-meisterschaft-halle-2025/deutscheMeisterschaft.jpeg',
+    description:
+      '2x Gold, 7x Silber bei der 11. Deutschen Drachenbootmeisterschaft in Halle! Deutscher Meister im ST Mixed 200m und 500m.',
+    link: '/news/deutsche-meisterschaft-halle-2025',
+  },
+  {
     title: 'Trainingslager 26./27.04.2025 in Rostock',
     image: '/news/trainingslager-rostock-2025/trainingslager1.jpg',
     description:

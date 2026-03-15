@@ -6,6 +6,13 @@ import { motion } from 'framer-motion';
 
 const news = [
   {
+    title: '11. Deutsche Drachenbootmeisterschaft 2025',
+    image: '/news/deutsche-meisterschaft-halle-2025/deutscheMeisterschaft.jpeg',
+    content:
+      '2x Gold und 7x Silber! Bei der 11. Deutschen Drachenbootmeisterschaft in Halle (13.–15.06.2025) holten die Baltic Dragons den Titel als Deutscher Meister im ST Mixed 200m und 500m.',
+    link: '/news/deutsche-meisterschaft-halle-2025',
+  },
+  {
     title: 'Trainingslager 10./11.05.2025 in Rostock',
     image: '/news/trainingslager-rostock-10-05-2025/trainingslager2.jpg',
     content:

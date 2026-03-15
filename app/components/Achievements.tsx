@@ -14,6 +14,23 @@ interface EventData {
 
 const events: EventData[] = [
   {
+    title: '11. Deutsche Drachenbootmeisterschaft',
+    image: ['/news/deutsche-meisterschaft-halle-2025/deutscheMeisterschaft.jpeg'],
+    locationTime: 'Halle (Saale), 13. - 15. Juni 2025',
+    description: 'Herausragende Leistungen bei der 11. Deutschen Drachenbootmeisterschaft mit 2x Gold und 7x Silber.',
+    achievements: [
+      'Gold, ST Mixed 200m – Deutscher Meister',
+      'Silber, SM Open 200m – Vizemeister',
+      'Silber, SM Damen 200m – Vizemeister',
+      'Gold, ST Mixed 500m – Deutscher Meister',
+      'Silber, SM Open 500m – Vizemeister',
+      'Silber, SM Damen 500m – Vizemeister',
+      'Silber, ST Mixed 2000m – Vizemeister',
+      'Silber, SM Open 2000m – Vizemeister',
+      'Silber, SM Damen 2000m – Vizemeister',
+    ],
+  },
+  {
     title: '19. Club-Crew Europameisterschaften (ECCC)',
     image: ['/erfolge/club-europameisterschaft-19-1.jpg', '/erfolge/club-europameisterschaft-19-2.jpg'],
     locationTime: 'Ravenna, 06. - 10. September 2023',
