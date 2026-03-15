@@ -1,0 +1,23 @@
+Codemap Generation Report — 2026-03-15
+========================================
+
+Status: INITIAL GENERATION (no previous codemaps found)
+
+Files scanned: 18 source files
+Codemaps created:
+  - docs/CODEMAPS/architecture.md  (~400 tokens)
+  - docs/CODEMAPS/frontend.md      (~600 tokens)
+  - docs/CODEMAPS/dependencies.md  (~300 tokens)
+
+Skipped codemaps (not applicable):
+  - backend.md   — No API routes or backend logic
+  - data.md      — No database; all data is static/hardcoded
+
+Architecture summary:
+  - Single Next.js 16 app with App Router
+  - 5 routes (/, /news, /news/[slug], /team, /impressum)
+  - 6 components (Navbar, Hero, Mission, Achievements, News, Footer)
+  - No global state, no CMS, no database
+  - External: Formspree (forms), Google Search Console (SEO)
+
+Next scan recommended after: adding new pages, components, or integrations.
