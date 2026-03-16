@@ -31,6 +31,13 @@ const events: EventData[] = [
     ],
   },
   {
+    title: '14. Club-Weltmeisterschaft im Drachenboot (IDBF CCWC)',
+    image: ['/erfolge/club-weltmeisterschaft-14-2.jpg', '/erfolge/club-weltmeisterschaft-14-3.jpg'],
+    locationTime: 'Ravenna, 03. - 08. September 2024',
+    description: 'Teilnahme an der Club-Weltmeisterschaft mit wertvollen internationalen Erfahrungen.',
+    achievements: [],
+  },
+  {
     title: '19. Club-Crew Europameisterschaften (ECCC)',
     image: ['/erfolge/club-europameisterschaft-19-1.jpg', '/erfolge/club-europameisterschaft-19-2.jpg'],
     locationTime: 'Ravenna, 06. - 10. September 2023',
@@ -41,13 +48,6 @@ const events: EventData[] = [
       'Gold, 200 m  im 10er SmallBoat Woman',
       'Gold, 500 m im 10er SmallBoat Woman',
     ],
-  },
-  {
-    title: '14. Club-Weltmeisterschaft im Drachenboot (IDBF CCWC)',
-    image: ['/erfolge/club-weltmeisterschaft-14-2.jpg', '/erfolge/club-weltmeisterschaft-14-3.jpg'],
-    locationTime: 'Ravenna, 03. - 08. September 2024',
-    description: 'Teilnahme an der Club-Weltmeisterschaft mit wertvollen internationalen Erfahrungen.',
-    achievements: [],
   },
 ];
 
@@ -102,20 +102,19 @@ function EventBlock({ event, index }: EventBlockProps) {
       viewport={{ once: true }}
       className="grid lg:grid-cols-2 gap-10 items-center"
     >
-      <div className={`order-1 lg:order-${index % 2 === 0 ? '1' : '2'} w-full`}>
-  <div className="relative w-full h-[350px] overflow-hidden rounded-xl shadow-lg">
-    <Image
-      src={event.image[currentImage]}
-      alt={`${event.title} Bild ${currentImage + 1}`}
-      fill
-      style={{ objectFit: 'cover' }}
-      className="rounded-xl"
-    />
-  </div>
-</div>
+      <div className={`w-full ${index % 2 === 0 ? 'order-1 lg:order-1' : 'order-1 lg:order-2'}`}>
+        <div className="relative w-full h-[350px] overflow-hidden rounded-xl shadow-lg">
+          <Image
+            src={event.image[currentImage]}
+            alt={`${event.title} Bild ${currentImage + 1}`}
+            fill
+            style={{ objectFit: 'cover' }}
+            className="rounded-xl"
+          />
+        </div>
+      </div>
 
-
-      <div className={`text-left order-2 lg:order-${index % 2 === 0 ? '2' : '1'} min-h-10 md:px-6`}>
+      <div className={`text-left min-h-10 md:px-6 ${index % 2 === 0 ? 'order-2 lg:order-2' : 'order-2 lg:order-1'}`}>
         <h3 className="text-2xl md:text-3xl font-semibold text-sky-300 mb-2">
           {event.title}
         </h3>
