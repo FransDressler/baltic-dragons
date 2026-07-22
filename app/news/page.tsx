@@ -6,6 +6,13 @@ import { motion } from 'framer-motion';
 
 const news = [
   {
+    title: 'Erfolgreiche Europameisterschaft für unsere Baltic Dragons',
+    image: '/news/europameisterschaft-muenchen-2026/europameisterschaft.jpeg',
+    content:
+      '14x Gold, 16x Silber und 16x Bronze! Acht Baltic Dragons vertraten die deutsche Nationalmannschaft bei der 16. IDBF Drachenboot-Europameisterschaft (08.–12.07.2026) auf der Olympia-Regattastrecke in München-Oberschleißheim.',
+    link: '/news/europameisterschaft-muenchen-2026',
+  },
+  {
     title: '11. Deutsche Drachenbootmeisterschaft 2025',
     image: '/news/deutsche-meisterschaft-halle-2025/deutscheMeisterschaft.jpeg',
     content:

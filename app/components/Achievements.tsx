@@ -14,6 +14,18 @@ interface EventData {
 
 const events: EventData[] = [
   {
+    title: '16. IDBF Drachenboot-Europameisterschaft (ENC 2026)',
+    image: ['/news/europameisterschaft-muenchen-2026/europameisterschaft.jpeg'],
+    locationTime: 'München-Oberschleißheim, 08. - 12. Juli 2026',
+    description:
+      'Acht Baltic Dragons gingen in verschiedenen Altersklassen für die deutsche Nationalmannschaft an den Start und kehrten mit einer beeindruckenden Medaillenausbeute zurück.',
+    achievements: [
+      '14x Gold',
+      '16x Silber',
+      '16x Bronze',
+    ],
+  },
+  {
     title: '11. Deutsche Drachenbootmeisterschaft',
     image: ['/news/deutsche-meisterschaft-halle-2025/deutscheMeisterschaft.jpeg'],
     locationTime: 'Halle (Saale), 13. - 15. Juni 2025',
