@@ -6,6 +6,13 @@ import Link from 'next/link';
 
 const newsItems = [
   {
+    title: '12. Gemeinsame Deutsche Drachenbootmeisterschaft 2026',
+    image: '/news/deutsche-meisterschaft-muenchen-2026/team.jpg',
+    description:
+      '3x Silber, 7x Bronze in München (31.07.–02.08.2026) – erstmals mit Senior B und Senior C am Start. Damit qualifiziert für die ECCC 2027 in Barcelona.',
+    link: '/news/deutsche-meisterschaft-muenchen-2026',
+  },
+  {
     title: 'Erfolgreiche Europameisterschaft für unsere Baltic Dragons',
     image: '/news/europameisterschaft-muenchen-2026/europameisterschaft.jpeg',
     description:

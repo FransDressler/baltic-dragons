@@ -14,6 +14,29 @@ interface EventData {
 
 const events: EventData[] = [
   {
+    title: '12. Gemeinsame Deutsche Drachenbootmeisterschaft',
+    image: [
+      '/news/deutsche-meisterschaft-muenchen-2026/team.jpg',
+      '/news/deutsche-meisterschaft-muenchen-2026/rennen.jpg',
+      '/news/deutsche-meisterschaft-muenchen-2026/pokale.jpg',
+    ],
+    locationTime: 'München, 31. Juli - 02. August 2026',
+    description:
+      'Erstmals starteten wir gleichzeitig in den Altersklassen Senior B und Senior C – mit 3x Silber, 7x Bronze und der Qualifikation für die Europäischen Drachenboot-Clubmeisterschaften (ECCC) 2027 in Barcelona.',
+    achievements: [
+      'Silber, ST Mixed 200m, Senior B – Deutscher Vizemeister',
+      'Silber, SM Damen 200m, Senior B – Deutscher Vizemeister',
+      'Bronze, SM Open 200m, Senior B',
+      'Bronze, SM Mixed 200m, Senior C',
+      'Bronze, SM Damen 500m, Senior B',
+      'Bronze, SM Open 500m, Senior B',
+      'Silber, SM Mixed 500m, Senior C – Deutscher Vizemeister',
+      'Bronze, ST Mixed 2000m, Senior B',
+      'Bronze, SM Open 2000m, Senior B',
+      'Bronze, SM Mixed 2000m, Senior C',
+    ],
+  },
+  {
     title: '16. IDBF Drachenboot-Europameisterschaft (ENC 2026)',
     image: ['/news/europameisterschaft-muenchen-2026/europameisterschaft.jpeg'],
     locationTime: 'München-Oberschleißheim, 08. - 12. Juli 2026',
