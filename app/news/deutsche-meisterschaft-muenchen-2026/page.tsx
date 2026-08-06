@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { Instagram } from 'lucide-react';
 
 interface Result {
   place: number;
@@ -56,6 +57,8 @@ Unser herzlicher Dank gilt allen Sportlerinnen und Sportlern, unserem Trainer- u
 Mit der Qualifikation für die Europäischen Drachenboot-Clubmeisterschaften (ECCC) 2027 wartet nun das nächste große Ziel auf die Baltic Dragons. Wir freuen uns darauf, unseren Verein und Deutschland in Barcelona zu vertreten und uns dort mit den besten Vereinsmannschaften Europas zu messen.
 
 Barcelona – wir kommen! 🐉💙`,
+  instagramUrl:
+    'https://www.instagram.com/reel/DbnmA3FNUTR/?igsh=ejd5c3Nrbmc0cjk2',
 };
 
 const medals: Record<number, string> = { 1: '🥇', 2: '🥈', 3: '🥉' };
@@ -83,6 +86,24 @@ export default function NewsArticlePage() {
         >
           {article.locationTime}
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="flex justify-center mb-12"
+        >
+          <a
+            href={article.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Reel zur Deutschen Meisterschaft auf Instagram ansehen"
+            className="inline-flex items-center gap-3 bg-sky-900 hover:bg-sky-800 text-sky-200 hover:text-sky-100 font-semibold px-5 py-3 rounded-full shadow-lg transition-colors duration-300"
+          >
+            <Instagram className="w-6 h-6 shrink-0" aria-hidden="true" />
+            <span>Reel auf Instagram ansehen</span>
+          </a>
+        </motion.div>
 
         <div className="space-y-12">
           {article.images.map((src, index) => (
